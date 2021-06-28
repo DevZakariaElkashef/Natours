@@ -1,0 +1,84 @@
+.about-section{
+    padding: 25rem 0;
+    background: $color-gray-light1;
+    margin-top: -20vh;
+
+    @include response(tablets){
+        padding: 20rem 0;
+    }
+}
+
+.features-section{
+    background: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url("../img/nat-4.jpg") center/cover no-repeat;
+    padding: 20rem 0;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    @include response(tablets){
+        padding: 15rem 0;
+    }
+
+    & > *{
+        transform: skewY(7deg);
+    }
+}
+
+.tours-section{
+    padding: 25rem 0 20rem 0;
+    background: $color-gray-light1;
+    margin-top: -10rem;
+
+    @include response(tablets){
+        padding: 20rem 0 15rem 0;
+    }
+}
+
+.stories-section{
+    position: relative;
+    padding: 15rem;
+
+    @include response(tablets){
+        padding: 10rem 0;
+    }
+}
+
+.book-section{
+    padding: 15rem 0;
+    background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark );
+
+    @include response(tablets){
+        padding: 10rem 0;
+    }
+
+}
+.book{
+    background: linear-gradient(105deg ,rgba($color-white, .9) 0%,rgba($color-white, .9) 50%, transparent 50%) ,url('../img/nat-10.jpg') center/cover no-repeat;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, .2);
+    border-radius: $radius;
+    &__form{
+        width: 50%;
+        padding: 6rem;
+        @include response(sm-screens){
+            width: 70%;
+        }
+        @include response(tablets){
+            width: 100%;
+            padding: 4rem;
+        }
+    }
+
+    @include response(sm-screens){
+        background: linear-gradient(105deg ,rgba($color-white, .9) 0%,rgba($color-white, .9) 70%, transparent 70%) ,url('../img/nat-10.jpg') center/cover no-repeat;
+
+    }
+    @include response(tablets){
+        background: linear-gradient(to right ,rgba($color-white, .9) 0%,rgba($color-white, .9) 100%) ,url('../img/nat-10.jpg') center/cover no-repeat;
+
+    }
+}
+
+/*
+    background-image: linear-gradient( 105deg , rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 65%, transparent 65%),url(../img/nat-10.jpg);
+    background-size: cover;
+}
+*/

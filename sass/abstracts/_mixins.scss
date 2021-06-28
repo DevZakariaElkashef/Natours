@@ -1,0 +1,64 @@
+@mixin clearfix {
+    &::before,
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*
+    480px: phone
+    768px: Tablets
+    1024px: Small screens
+    1200px: large screens
+    1201px and more:  Extra large screens
+*/
+
+@mixin response($breakpoint) {
+
+    @if $breakpoint == sm-phone {
+        @media only screen and (max-width:21.875em) {               //350px
+            @content
+        }
+    };
+
+    @if $breakpoint == phone {
+        @media only screen and (max-width:30em) {               //480px
+            @content
+        }
+    };
+
+    @if $breakpoint == tablets {
+        @media only screen and (max-width:48em) {                //768px
+            @content
+        }
+    };
+
+    @if $breakpoint == sm-screens {
+        @media only screen and (max-width:64em) {                //1024px
+            @content
+        }
+    };
+
+    @if $breakpoint ==  l-screens {
+        @media only screen and (max-width:75em) {                //1200px
+            @content
+        }
+    };
+
+    @if $breakpoint == xl-screens {
+        @media only screen and (min-width:75.0625em) {            //1201px
+            @content
+        }
+    };
+
+   
+}

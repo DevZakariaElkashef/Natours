@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; // 1rem = 16px 
+  
+  @include response(xl-screens){
+    font-size: 62.5%;
+  }
+  
+  @include response(l-screens){
+    font-size: 60%;
+  }
+  
+  @include response(sm-screens){
+    font-size: 55%;
+  }
+  
+  @include response(tablets){
+    font-size: 45%;
+  }
+
+  @include response(phone){
+    font-size: 35%;
+  }
+  
+}
+
+body {
+  box-sizing: border-box; 
+  padding: 3rem;
+    
+  @include response(tablets){
+    padding: 0;
+  }
+
+}
+
+::selection{
+  background: $color-primary;
+  color: $color-white;
+}

@@ -1,0 +1,25 @@
+.btn--animated {
+    animation: moveintop 1s ease-out 0.7s backwards; 
+}
+
+.text-center{
+    text-align: center !important;
+}
+.mb-8{
+    margin-bottom: 8rem !important;
+
+    @include response(tablets){
+        margin-bottom: 4rem !important;
+    }
+}
+.mb-2{
+    margin-bottom: 2rem !important;
+
+    @include response(tablets){
+        margin-bottom: 1rem !important;
+    }
+}
+
+.my-4{
+    margin: 4rem 0;
+}
